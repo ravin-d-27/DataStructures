@@ -23,11 +23,11 @@ int main()
 
     if (done==1)
     {
-        printf("\nThe Brackets of the Expression is Balanced!");
+        printf("\nThe Expression is Balanced!");
     }
     else
     {
-        printf("\nThe Brackets of the Expression is Not Balanced!");
+        printf("\nThe Expression is Not Balanced!");
     }
     return 0;
 }
@@ -47,7 +47,7 @@ int balanced(char exp[])
         {
             if (checkempty()==1)
             {
-                printf("\nInvalid Expression: The Right Brackets are more than the Left Bracket");
+                printf("\nInvalid Expression");
                 return 0;
             }
             else
@@ -55,7 +55,7 @@ int balanced(char exp[])
                 char temp = pop();
                 if(match(temp, exp[i])==0)
                 {
-                    printf("\nInvalid Expression: There is mismatch in the brackets");
+                    printf("\nInvalid Expression");
                     return 0;
                 }
             }  
@@ -93,7 +93,6 @@ int checkempty()
 {
     if (top==-1)
     {
-        printf("\nThe Stack is Empty!");
         return 1;
     }
     else
